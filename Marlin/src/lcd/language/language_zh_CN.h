@@ -25,7 +25,7 @@
  * Simplified Chinese
  *
  * LCD Menu Messages
- * See also https://marlinfw.org/docs/development/lcd_language.html
+ * See also http://marlinfw.org/docs/development/lcd_language.html
  *
  */
 namespace Language_zh_CN {
@@ -35,11 +35,23 @@ namespace Language_zh_CN {
   PROGMEM Language_Str LANGUAGE                            = _UxGT("Simplified Chinese");
 
   PROGMEM Language_Str WELCOME_MSG                         = MACHINE_NAME _UxGT("已就绪.");     //" ready."
+  PROGMEM Language_Str MSG_MARLIN                          = _UxGT("Marlin");
+  PROGMEM Language_Str MSG_YES                             = _UxGT("是");  //"YES"
+  PROGMEM Language_Str MSG_NO                              = _UxGT("否");  //"NO"
   PROGMEM Language_Str MSG_BACK                            = _UxGT("返回");     // ”Back“
+  PROGMEM Language_Str MSG_MEDIA_ABORTING                  = _UxGT("正在停止...");   //"Aborting..."
   PROGMEM Language_Str MSG_MEDIA_INSERTED                  = _UxGT("存储卡已插入");     //"Card inserted"
   PROGMEM Language_Str MSG_MEDIA_REMOVED                   = _UxGT("存储卡被拔出");     //"Card removed"
-  PROGMEM Language_Str MSG_LCD_ENDSTOPS                    = _UxGT("挡块");     //"Endstops" // Max length 8 characters
+  PROGMEM Language_Str MSG_MEDIA_RELEASED                  = _UxGT("存储卡被拔出");   //"Media Released"
+  PROGMEM Language_Str MSG_MEDIA_WAITING                   = _UxGT("等待存储卡");    //"Waiting for media"
+  PROGMEM Language_Str MSG_MEDIA_READ_ERROR                = _UxGT("存储卡读取错误"); //"Media read error"
+  PROGMEM Language_Str MSG_MEDIA_USB_REMOVED               = _UxGT("USB已断开");   //"USB device removed"
+  PROGMEM Language_Str MSG_MEDIA_USB_FAILED                = _UxGT("USB启动失败");  //"USB start failed"
+  PROGMEM Language_Str MSG_LCD_ENDSTOPS                    = _UxGT("限位");     //"Endstops" // Max length 8 characters
+  PROGMEM Language_Str MSG_LCD_SOFT_ENDSTOPS               = _UxGT("软件限位");    //"Soft Endstops"
   PROGMEM Language_Str MSG_MAIN                            = _UxGT("主菜单");     //"Main"
+  PROGMEM Language_Str MSG_ADVANCED_SETTINGS               = _UxGT("高级设置");   //"Advanced Settings"
+  PROGMEM Language_Str MSG_CONFIGURATION                   = _UxGT("设置");    //Configuration
   PROGMEM Language_Str MSG_AUTOSTART                       = _UxGT("自动开始");     //"Autostart"
   PROGMEM Language_Str MSG_DISABLE_STEPPERS                = _UxGT("关闭步进电机");     //"Disable steppers"
   PROGMEM Language_Str MSG_DEBUG_MENU                      = _UxGT("调试菜单");     // "Debug Menu"
@@ -48,6 +60,7 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_AUTO_HOME_X                     = _UxGT("回X原位");     //"Home X"
   PROGMEM Language_Str MSG_AUTO_HOME_Y                     = _UxGT("回Y原位");     //"Home Y"
   PROGMEM Language_Str MSG_AUTO_HOME_Z                     = _UxGT("回Z原位");     //"Home Z"
+  PROGMEM Language_Str MSG_AUTO_Z_ALIGN                    = _UxGT("自动Z轴平衡");   //"Auto Z-Align"
   PROGMEM Language_Str MSG_LEVEL_BED_HOMING                = _UxGT("平台调平XYZ归原位");     //"Homing XYZ"
   PROGMEM Language_Str MSG_LEVEL_BED_WAITING               = _UxGT("单击开始热床调平");     //"Click to Begin"
   PROGMEM Language_Str MSG_LEVEL_BED_NEXT_POINT            = _UxGT("下个热床调平点");     //"Next Point"
@@ -79,7 +92,7 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_BED_LEVELING                    = _UxGT("调平热床");     //"Bed leveling"
   PROGMEM Language_Str MSG_LEVEL_BED                       = _UxGT("调平热床");     //"Level bed"
   PROGMEM Language_Str MSG_LEVEL_CORNERS                   = _UxGT("调平边角");     // "Level corners"
-
+  PROGMEM Language_Str MSG_MESH_EDITOR                     = _UxGT("网格编辑器");    //"Mesh Editor"
   PROGMEM Language_Str MSG_NEXT_CORNER                     = _UxGT("下个边角");     // "Next corner"
   PROGMEM Language_Str MSG_EDIT_MESH                       = _UxGT("编辑网格");     // "Edit Mesh"
   PROGMEM Language_Str MSG_EDITING_STOPPED                 = _UxGT("网格编辑已停止");     // "Mesh Editing Stopped"
@@ -88,6 +101,7 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_UBL_DOING_G29                   = _UxGT("执行G29");     // "Doing G29"
   PROGMEM Language_Str MSG_UBL_TOOLS                       = _UxGT("UBL工具");     // "UBL Tools"
   PROGMEM Language_Str MSG_UBL_LEVEL_BED                   = _UxGT("统一热床调平(UBL)");     // "Unified Bed Leveling"
+  PROGMEM Language_Str MSG_LCD_TILTING_MESH                = _UxGT("倾斜点");  //"Tilting Point"
   PROGMEM Language_Str MSG_UBL_MANUAL_MESH                 = _UxGT("手工创设网格");     // "Manually Build Mesh"
   PROGMEM Language_Str MSG_UBL_BC_INSERT                   = _UxGT("放置垫片并测量");     // "Place shim & measure"
   PROGMEM Language_Str MSG_UBL_BC_INSERT2                  = _UxGT("测量");     // "Measure"
@@ -96,6 +110,8 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_UBL_ACTIVATE_MESH               = _UxGT("激活UBL");     // "Activate UBL"
   PROGMEM Language_Str MSG_UBL_DEACTIVATE_MESH             = _UxGT("关闭UBL");     // "Deactivate UBL"
   PROGMEM Language_Str MSG_UBL_SET_TEMP_BED                = _UxGT("设置热床温度");     // "Bed Temp"
+  PROGMEM Language_Str MSG_UBL_BED_TEMP_CUSTOM             = _UxGT("设置热床温度");    //"Bed Temp")
+  PROGMEM Language_Str MSG_UBL_SET_TEMP_HOTEND             = _UxGT("设置喷嘴温度");     // "Hotend Temp"
   PROGMEM Language_Str MSG_UBL_SET_TEMP_HOTEND             = _UxGT("热端温度");     // "Hotend Temp"
   PROGMEM Language_Str MSG_UBL_MESH_EDIT                   = _UxGT("网格编辑");     // "Mesh Edit"
   PROGMEM Language_Str MSG_UBL_EDIT_CUSTOM_MESH            = _UxGT("编辑客户网格");     // "Edit Custom Mesh"
@@ -112,6 +128,13 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_UBL_VALIDATE_MESH_M1            = _UxGT("批准 ") PREHEAT_1_LABEL _UxGT(" 网格");     // "Validate PREHEAT_1_LABEL Mesh"
   PROGMEM Language_Str MSG_UBL_VALIDATE_MESH_M2            = _UxGT("批准 ") PREHEAT_2_LABEL _UxGT(" 网格");     // "Validate PREHEAT_2_LABEL Mesh"
   PROGMEM Language_Str MSG_UBL_VALIDATE_CUSTOM_MESH        = _UxGT("批准客户网格");     // "Validate Custom Mesh"
+ PROGMEM Language_Str MSG_G26_HEATING_BED                 = _UxGT("G26 加热热床");    //"G26 Heating Bed"
+  PROGMEM Language_Str MSG_G26_HEATING_NOZZLE              = _UxGT("G26 加热喷嘴"); //"G26 Heating Nozzle"
+  PROGMEM Language_Str MSG_G26_MANUAL_PRIME                = _UxGT("手动装填");  //"Manual priming..."
+  PROGMEM Language_Str MSG_G26_FIXED_LENGTH                = _UxGT("固定距离装填");   //"Fixed Length Prime"
+  PROGMEM Language_Str MSG_G26_PRIME_DONE                  = _UxGT("完成装填");   //"Done Priming"
+  PROGMEM Language_Str MSG_G26_CANCELED                    = _UxGT("G26已取消");   //"G26 Canceled"
+  PROGMEM Language_Str MSG_G26_LEAVING                     = _UxGT("取消 G26");  //"Leaving G26"
   PROGMEM Language_Str MSG_UBL_CONTINUE_MESH               = _UxGT("继续热床网格");     // "Continue Bed Mesh"
   PROGMEM Language_Str MSG_UBL_MESH_LEVELING               = _UxGT("网格调平");     // "Mesh Leveling"
   PROGMEM Language_Str MSG_UBL_3POINT_MESH_LEVELING        = _UxGT("三点调平");     // "3-Point Leveling"
@@ -136,8 +159,8 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_UBL_STORAGE_SLOT                = _UxGT("存储槽");     // "Memory Slot"
   PROGMEM Language_Str MSG_UBL_LOAD_MESH                   = _UxGT("装载热床网格");     // "Load Bed Mesh"
   PROGMEM Language_Str MSG_UBL_SAVE_MESH                   = _UxGT("保存热床网格");     // "Save Bed Mesh"
-  PROGMEM Language_Str MSG_MESH_LOADED                     = _UxGT("网格 %i 已装载");     // "Mesh %i loaded"
-  PROGMEM Language_Str MSG_MESH_SAVED                      = _UxGT("网格 %i 已保存");     // "Mesh %i saved"
+  PROGMEM Language_Str MSG_MESH_LOADED                     = _UxGT("M117 网格 %i 已装载");     // "Mesh %i loaded"
+  PROGMEM Language_Str MSG_MESH_SAVED                      = _UxGT("M117 网格 %i 已保存");     // "Mesh %i saved"
   PROGMEM Language_Str MSG_UBL_NO_STORAGE                  = _UxGT("没有存储");     // "No storage"
   PROGMEM Language_Str MSG_UBL_SAVE_ERROR                  = _UxGT("错误: UBL保存");     // "Err: UBL Save"
   PROGMEM Language_Str MSG_UBL_RESTORE_ERROR               = _UxGT("错误: UBL还原");     // "Err: UBL Restore"
@@ -246,6 +269,16 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_INFO_SCREEN                     = _UxGT("信息屏");     //"Info screen"
   PROGMEM Language_Str MSG_PREPARE                         = _UxGT("准备");     //"Prepare"
   PROGMEM Language_Str MSG_TUNE                            = _UxGT("调整");     //"Tune"
+  PROGMEM Language_Str MSG_START_PRINT                     = _UxGT("开始打印");   //"Start Print"
+  PROGMEM Language_Str MSG_BUTTON_NEXT                     = _UxGT("下一个");   //"Next"
+  PROGMEM Language_Str MSG_BUTTON_INIT                     = _UxGT("出事  ");   //"Init"
+  PROGMEM Language_Str MSG_BUTTON_STOP                     = _UxGT("停止  ");   //"Stop"
+  PROGMEM Language_Str MSG_BUTTON_PRINT                    = _UxGT("打印  ");   //"Print"
+  PROGMEM Language_Str MSG_BUTTON_RESET                    = _UxGT("重置  ");   //"Reset"
+  PROGMEM Language_Str MSG_BUTTON_CANCEL                   = _UxGT("取消  ");   //"Cancel"
+  PROGMEM Language_Str MSG_BUTTON_DONE                     = _UxGT("确认  ");   //"Done"
+  PROGMEM Language_Str MSG_BUTTON_BACK                     = _UxGT("返回  ");   //"Back"
+  PROGMEM Language_Str MSG_BUTTON_PROCEED                  = _UxGT("继续  ");   //"Proceed"
   PROGMEM Language_Str MSG_PAUSE_PRINT                     = _UxGT("暂停打印");     //"Pause print"
   PROGMEM Language_Str MSG_RESUME_PRINT                    = _UxGT("恢复打印");     //"Resume print"
   PROGMEM Language_Str MSG_STOP_PRINT                      = _UxGT("停止打印");     //"Stop print"
@@ -331,7 +364,7 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_CASE_LIGHT                      = _UxGT("外壳灯");     // "Case light"
   PROGMEM Language_Str MSG_CASE_LIGHT_BRIGHTNESS           = _UxGT("灯亮度");     // "Light BRIGHTNESS"
 
-  PROGMEM Language_Str MSG_KILL_EXPECTED_PRINTER           = _UxGT("打印机不正确");     // "The printer is incorrect"
+  PROGMEM Language_Str MSG_EXPECTED_PRINTER                = _UxGT("打印机不正确");     // "The printer is incorrect"
 
   #if LCD_WIDTH >= 20
     PROGMEM Language_Str MSG_INFO_PRINT_COUNT              = _UxGT("打印计数");     //"Print Count"
@@ -363,7 +396,7 @@ namespace Language_zh_CN {
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_OPTION_PURGE    = _UxGT("清除更多");     // "Purge more"
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_OPTION_RESUME   = _UxGT("恢复打印");     //"Resume print"
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_NOZZLE          = _UxGT("  喷嘴: ");     // "  Nozzle: "
-  PROGMEM Language_Str MSG_KILL_HOMING_FAILED              = _UxGT("归原位失败");     // "Homing failed"
+  PROGMEM Language_Str MSG_LCD_HOMING_FAILED               = _UxGT("归原位失败");     // "Homing failed"
   PROGMEM Language_Str MSG_LCD_PROBING_FAILED              = _UxGT("探针探测失败");     // "Probing failed"
   PROGMEM Language_Str MSG_M600_TOO_COLD                   = _UxGT("M600: 太凉");     // "M600: Too cold"
 
